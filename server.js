@@ -11,16 +11,8 @@ const image = require('./controllers/image');
 
 const db = knex({
   client: 'pg',
-  // connection: 'postgres://postgres:arbre147ae@127.0.0.1:5432/smart-brain'
-   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : process.env.PGPASSWORD,
-    database : 'smart-brain'
-  }
+  connection: 'postgres://postgres:arbre147ae@127.0.0.1:5432/smart-brain'
 });
-
-console.log(process.env);
 
 const app = express();
 
